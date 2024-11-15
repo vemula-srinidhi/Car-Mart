@@ -1,0 +1,42 @@
+.car-list-container {
+  padding: 2rem;
+  min-height: calc(100vh - 70px);
+  background: var(--background-color);
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .car-list-container {
+    padding: 1rem;
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
+}
